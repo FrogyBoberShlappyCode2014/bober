@@ -1,0 +1,135 @@
+/* styles.css for BOBER Framework */
+
+:root {
+    --bober-bg: #1a0033; /* Глибокий фіолетовий, як і належить! */
+    --bober-text: #e0e0e0;
+    --bober-accent-purple: #8a2be2; /* Улюблений фіолетовий */
+    --bober-accent-light: #a64dff;
+    --bober-red: #ff0000;
+    --bober-yellow: #ffff00;
+    --bober-dark-purple: #330066;
+
+    --font-shlapa: 'Comic Sans MS', cursive; /* Бо це ж шляпа! */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bober-bg);
+    color: var(--bober-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden; /* Для ефектів шляпування */
+}
+
+.shlyapa-container {
+    background-color: rgba(26, 0, 51, 0.8);
+    border: 3px solid var(--bober-accent-purple);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 50px var(--bober-accent-light);
+    max-width: 800px;
+    width: 90%;
+    transform: rotateZ(3deg); /* Трохи шляпи одразу */
+    animation: pulseGlow 3s infinite alternate;
+}
+
+/* Шляпові Стилі (CSS) */
+.div-shlyapa {
+    background-color: var(--bober-dark-purple);
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    transform: rotate(360deg); /* Повний оберт абсурду */
+    box-shadow: 0 0 100px var(--bober-yellow), 0 0 200px var(--bober-red), 0 0 300px var(--bober-accent-light); /* Веселкове світіння */
+    animation: rotateAndGlow 5s infinite linear;
+    border: 2px dashed var(--bober-yellow);
+}
+
+.div-shlyapa i {
+    color: var(--bober-accent-light);
+    text-shadow: 0 0 10px white, 0 0 20px var(--bober-accent-purple);
+}
+
+.text-shlapa {
+    font-family: var(--font-shlapa);
+    font-weight: 900; /* Було 9000, але це забагато для стандартних шрифтів */
+    color: #f0f; /* Яскраво-рожевий/фуксія, близький до фіолетового, але більш "шляповий" */
+    text-shadow: 0 0 15px var(--bober-accent-purple), 0 0 25px white; /* Фіолетове світіння */
+    font-size: 3em;
+    animation: textColorChange 5s infinite alternate;
+}
+
+.intro-text {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--bober-text);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.button-gryz-gryz {
+    background-color: var(--bober-red);
+    color: white;
+    padding: 15px 30px;
+    border: 5px dashed var(--bober-yellow);
+    border-radius: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    animation: bounceGryz 0.5s infinite alternate, glowRedYellow 2s infinite alternate;
+    box-shadow: 0 0 15px var(--bober-red);
+}
+
+.button-gryz-gryz:hover {
+    background-color: #cc0000;
+    transform: scale(1.05) rotateZ(-5deg);
+}
+
+/* Анімації */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 50px var(--bober-accent-light); }
+    50% { box-shadow: 0 0 70px var(--bober-accent-light), 0 0 80px rgba(138, 43, 226, 0.5); }
+    100% { box-shadow: 0 0 50px var(--bober-accent-light); }
+}
+
+@keyframes rotateAndGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes textColorChange {
+    0% { color: #f0f; }
+    50% { color: var(--bober-yellow); }
+    100% { color: #f0f; }
+}
+
+@keyframes bounceGryz {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+
+@keyframes glowRedYellow {
+    0% { box-shadow: 0 0 10px var(--bober-red), 0 0 20px var(--bober-yellow); }
+    50% { box-shadow: 0 0 20px var(--bober-red), 0 0 30px var(--bober-yellow), 0 0 40px var(--bober-red); }
+    100% { box-shadow: 0 0 10px var(--bober-red), 0 0 20px var(--bober-yellow); }
+}
+
+#bober-output {
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: var(--bober-yellow);
+    min-height: 50px;
+    border: 1px dashed var(--bober-accent-purple);
+    padding: 10px;
+    animation: textFlicker 1s infinite alternate;
+}
+
+@keyframes textFlicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
