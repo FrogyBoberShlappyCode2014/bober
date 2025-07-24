@@ -1,0 +1,27 @@
+{
+  "name": "bober-shlyapa-framework",
+  "version": "0.0.1-shlyapa",
+  "description": "Найбільш естетично-шлеповий фреймворк у світі, створений qp78zx23vy10wk54!",
+  "main": "src/script.js",
+  "scripts": {
+    "start": "npm run shlyapa",
+    "shlyapa": "echo 'БОБЕР ШЛЯПАЄ! Запускаємо dev-сервер...' && npx http-server public -c-1 -o",
+    "build": "echo 'БОБЕР ЗБИРАЄ! Це буде величезний абсурд!'",
+    "test": "echo 'БОБЕР ТЕСТУЄ! (тестів поки що немає, але буде ще більше шляпи!)' && exit 0"
+  },
+  "keywords": [
+    "bober",
+    "shlyapa",
+    "framework",
+    "абсурд",
+    "qp78zx23vy10wk54",
+    "фіолетовий"
+  ],
+  "author": "qp78zx23vy10wk54 <your-email@example.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "jquery": "^3.7.1"
+  },
+  "dependencies": {}
+}
